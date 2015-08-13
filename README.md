@@ -9,8 +9,13 @@ Coding Guidelines
 4. The file name and class name should match  
 5. Always add access providers – private, public and protected – to all classes, properties, methods and fields. C# allows you to skip access provider if it is private. But as per our guidelines, always add private access providers   
 6. The var keyword should only be used if the type of the field is directly visible on the right.    
-                      var movies = new List<Movies>();  is allowed since the type is visible on right  
-                      var movies = GetMovies (); is not allowed since type is not visible on the right  
+```cs
+var movies = new List<Movies>();  is allowed since the type can be directly inferred from the RHS
+```  
+```cs
+var movies = GetMovies();  is not allowed since the type cannot be directly inferred from the RHS  
+```  
+.  
 7. Every closing brace bracket should be followed by a single blank line unless it is followed by another closing brace bracket.  
 8. Every method should be responsible to do just one action. If a method is doing more than one operation, split them into multiple methods. The method name should be descriptive enough to clearly tell you what function it performs. Even if that requires you to write a very long name for the method.  
 9. In a class, define first the private fields, followed by constructor, followed by any properties, followed by public methods and then private ones  
