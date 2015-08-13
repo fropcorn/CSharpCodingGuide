@@ -122,20 +122,28 @@ Constants
  * The following cases are exceptions:  
     *	View names – Visual Studio will show an error if there is a typo in a view name in code for example return View(“NoExist”) will yield an error  
     *	Log messages that are not referenced by tests – if you are logging a message for development purposes and that message is not referenced by a test, then you can use a string literal  
-    *	Validation messages for data annotation attributes that are not referenced elsewhere – if you have validation messages that are not referenced by tests, or other parts of the code, they can utilize string literals. If the message should be referenced by other code (eg a test or to avoid string duplication), it must be a constant  
+    *	Validation messages for data annotation attributes that are not referenced elsewhere – if you have validation messages that are not referenced by tests, or other parts of the code, they can utilize string literals. If the message should be referenced by other code (eg a test or to avoid string duplication), it must be a constant 
+
+CSS, HTML and Mobile Screens UI Naming Conventions  
+* DO use PascalCasing for HTML element IDs, for example “FeatureBlock”, not “feature-block” not “featureBlock”.  
+* DO use a dash to separate words for class names, for example "page-checkin", not “PageCheckin”, not "pageCheckin"  
+* DO use descriptive, semantic names that reflect the purpose of the element or class. Avoid using names that are bound to the presentation (for example, location or color related) where possible.  
+* DO NOT use abbreviations. Use descriptive names.  
+* NOTE: if the name would be greater than 30 characters, abbreviations are acceptable. For example the CSS class applied to the Manage Communication Preferences page should be named "page-manage-comms-pref". The name "page-manage-communication-preferences" is too long, and "page-mcp" is too short and no longer adequately describes the class.  
+* DO ensure names are spelt correctly  
 
 General
-1. All classes, methods, constants, properties and public fields names to follow Pascal casing  
-2. All private variables and fields names have to follow Camal casing  
-3. Every file should have one class definition  
-4. The file name and class name should match  
-5. Always add access providers – private, public and protected – to all classes, properties, methods and fields. C# allows you to skip access provider if it is private. But as per our guidelines, always add private access providers   
-6. Every closing brace bracket should be followed by a single blank line unless it is followed by another closing brace bracket.  
-7. Every method should be responsible to do just one action. If a method is doing more than one operation, split them into multiple methods. The method name should be descriptive enough to clearly tell you what function it performs. Even if that requires you to write a very long name for the method.  
-8. In a class, define first the private fields, followed by constructor, followed by any properties, followed by public methods and then private ones  
-9. Design classes based on Single Responsibility Pattern. Name the class that describes its responsibility clearly.  
-10. Use Linq instead of looping wherever possible  
-11. Code should properly indented  
-12. Use proper exception handling where ever necessary. If empty catch block has to be use to swallow an exception then proper comments should be provided to indicate the reason for it.  
-13. A comment is always is written in following format “// KB: …..”. Add a single space after the “//” and the initials of the developer adding the comment should be added followed by his comments  
-14. Reuse code as much as you can  
+* All classes, methods, constants, properties and public fields names to follow Pascal casing
+* All private variables and fields names have to follow Camal casing  
+* Every file should have one class definition  
+* The file name and class name should match  
+* Always add access providers – private, public and protected – to all classes, properties, methods and fields. C# allows you to skip access provider if it is private. But as per our guidelines, always add private access providers   
+* Every closing brace bracket should be followed by a single blank line unless it is followed by another closing brace bracket.  
+* Every method should be responsible to do just one action. If a method is doing more than one operation, split them into multiple methods. The method name should be descriptive enough to clearly tell you what function it performs. Even if that requires you to write a very long name for the method.  
+* In a class, define first the private fields, followed by constructor, followed by any properties, followed by public methods and then private ones  
+* Design classes based on Single Responsibility Pattern. Name the class that describes its responsibility clearly.  
+* Use Linq instead of looping wherever possible  
+* Code should properly indented  
+* Use proper exception handling where ever necessary. If empty catch block has to be use to swallow an exception then proper comments should be provided to indicate the reason for it.  
+* A comment is always is written in following format “// KB: …..”. Add a single space after the “//” and the initials of the developer adding the comment should be added followed by his comments  
+* Reuse code as much as you can  
