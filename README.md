@@ -2,8 +2,19 @@
 Please use this as reference to all guildlines and best practices to follow while coding in C# and JavaScript. It also list the best practices to follow with version control
 
 ### C# 
-#### Naming Conventions  
-###### Static Field Naming Guidelines  
+
+Class Design  
+* Every file should have one class definition  
+* The file name and class name should match  
+* In a class, define first the private fields, followed by constructor, followed by any properties, followed by public methods and then private ones  
+* Design classes based on Single Responsibility Pattern. Name the class that describes its responsibility clearly.  
+* Always add access providers – private, public and protected – to all classes, properties, methods and fields. C# allows you to skip access provider if it is private. But as per our guidelines, always add private access providers   
+
+General Naming Guidelines  
+* All classes, methods, constants, properties and public fields names to follow Pascal casing
+* All private variables and fields names have to follow Camal casing  
+
+Static Field Naming Guidelines  
  * DO NOT use Hungarian notation  
 
 Constant Field Naming Guidelines  
@@ -124,26 +135,15 @@ Constants
     *	Log messages that are not referenced by tests – if you are logging a message for development purposes and that message is not referenced by a test, then you can use a string literal  
     *	Validation messages for data annotation attributes that are not referenced elsewhere – if you have validation messages that are not referenced by tests, or other parts of the code, they can utilize string literals. If the message should be referenced by other code (eg a test or to avoid string duplication), it must be a constant 
 
-CSS, HTML and Mobile Screens UI Naming Conventions  
-* DO use PascalCasing for HTML element IDs, for example “FeatureBlock”, not “feature-block” not “featureBlock”.  
-* DO use a dash to separate words for class names, for example "page-checkin", not “PageCheckin”, not "pageCheckin"  
+Mobile Screens UI Naming Conventions  
+* DO use PascalCasing for UI element IDs, for example “FeatureBlock”, not “feature-block” not “featureBlock”.  
+* DO use a dash to separate words for style names, for example "page-checkin", not “PageCheckin”, not "pageCheckin"  
 * DO use descriptive, semantic names that reflect the purpose of the element or class. Avoid using names that are bound to the presentation (for example, location or color related) where possible.  
 * DO NOT use abbreviations. Use descriptive names.  
-* NOTE: if the name would be greater than 30 characters, abbreviations are acceptable. For example the CSS class applied to the Manage Communication Preferences page should be named "page-manage-comms-pref". The name "page-manage-communication-preferences" is too long, and "page-mcp" is too short and no longer adequately describes the class.  
+* NOTE: if the name would be greater than 30 characters, abbreviations are acceptable. For example the style applied to the Manage Communication Preferences page should be named "page-manage-comms-pref". The name "page-manage-communication-preferences" is too long, and "page-mcp" is too short and no longer adequately describes the class.  
 * DO ensure names are spelt correctly  
 
 General
-* All classes, methods, constants, properties and public fields names to follow Pascal casing
-* All private variables and fields names have to follow Camal casing  
-* Every file should have one class definition  
-* The file name and class name should match  
-* Always add access providers – private, public and protected – to all classes, properties, methods and fields. C# allows you to skip access provider if it is private. But as per our guidelines, always add private access providers   
 * Every closing brace bracket should be followed by a single blank line unless it is followed by another closing brace bracket.  
 * Every method should be responsible to do just one action. If a method is doing more than one operation, split them into multiple methods. The method name should be descriptive enough to clearly tell you what function it performs. Even if that requires you to write a very long name for the method.  
-* In a class, define first the private fields, followed by constructor, followed by any properties, followed by public methods and then private ones  
-* Design classes based on Single Responsibility Pattern. Name the class that describes its responsibility clearly.  
-* Use Linq instead of looping wherever possible  
-* Code should properly indented  
-* Use proper exception handling where ever necessary. If empty catch block has to be use to swallow an exception then proper comments should be provided to indicate the reason for it.  
 * A comment is always is written in following format “// KB: …..”. Add a single space after the “//” and the initials of the developer adding the comment should be added followed by his comments  
-* Reuse code as much as you can  
